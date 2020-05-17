@@ -1,0 +1,23 @@
+spring:
+ datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://120.24.95.233:8080/sell_dog?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: 123456
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      testWhileIdle: true
+      testOnBorrow: flase
+      testOnReturn: false
+      filters: stat,wall,logback
+      logSlowSql: true
+mybatis:
+ mapper-locations: classpath:mapper/*.xml
+ type-aliases-package: com.lh.shop.commons.entity
+ configuration:
+     cache-enabled: true

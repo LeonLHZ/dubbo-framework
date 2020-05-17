@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: shop-service-user-provider
+  profiles:
+    include: redis,mybatis,dubbo,log
+
+dubbo:
+   scan:
+     basePackages: com.lh.shop.service.user.provider.api.impl
+   ## ApplicationConfig Bean
+   application:
+     id: shop-service-user-provider
+     name: shop-service-user-provider
+   protocol:
+    port: 2082
+    status: server
+
+server:
+   port: 8082
+
+
+
+
+
+

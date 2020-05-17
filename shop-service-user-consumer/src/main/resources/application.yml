@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: shop-service-user-consumer
+  profiles:
+    include: dubbo,host,log
+
+dubbo:
+   scan:
+     basePackages: com.lh.shop.service.user.consumer.api.impl
+   ## ApplicationConfig Bean
+   application:
+     id: shop-service-user-consumer
+     name: shop-service-user-consumer
+   ## ProtocolConfig Bean
+   protocol:
+     port: 2081
+     status: server
+
+server:
+   port: 8081
+
+
+
+
+

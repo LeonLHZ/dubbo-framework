@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: shop-service-redis-provider
+  profiles:
+    include: redis,dubbo,log
+
+dubbo:
+   scan:
+     basePackages: com.lh.shop.service.redis.provider.api.impl
+   ## ApplicationConfig Bean
+   application:
+     id: shop-service-redis-provider
+     name: shop-service-redis-provider
+   ## ProtocolConfig Bean
+   protocol:
+     port: 2080
+     status: server
+
+server:
+   port: 9090
+
+
+
+
